@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mon portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<script>
+  document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href').substring(1); // enlève le #
+      if (targetId === '') { // Accueil → retour en haut
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+</script>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo"> Vic <span class="red">.</span><span class="highlight">Dev</span></div>
+      <ul class="nav-links">
+        <li><a href="#">Accueil</a></li>          <!-- # = haut de page -->
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>   <!-- on créera #contact après -->
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="greeting">B<span class="highlight">onjour</span>!</p>
+      <h1>Bienvenue <span class="name">sur ma page</span></h1>
+      <p class="subtitle">Je suis dévéloppeur <span class="highlight">Web</span> plus 3ans d'expèrience</p>
+      
+      <p class="description">
+        Développeur Web, Cyber éthique.
+      </p>
+
+      <button class="btn-contact">CONTACTEZ MOI</button>
+    </div>
+
+    <div class="hero-image-container">
+      <div class="circle-frame">
+        <img src="Sary/vic.png" 
+             alt="Lorenzo Fellon" 
+             class="profile-photo">
+      </div>
+      
+      
+    </div>
+  </section> </br> <hr>
+  <section id="apropos">
+  <div class="apropos-container">
+    <div class="apropos-text">
+      <h2>À propos de moi</h2>
+      <p>
+        Passionné par la création d'expériences web fluides,<br>
+        je suis <span class="name">HERINDRAINY Victor</span>, développeur FullStack.<br>
+        Avec une base solide en <span class="highlight">PHP</span> et <span class="highlight">JavaScript</span>,<br>
+        j'aime transformer des problèmes complexes en solutions simples et élégantes.<br>
+        Quand je ne code pas, vous me trouverez probablement en train de jouer au football<br>
+        ou de découvrir de nouvelles technologies.
+      </p>
+    </div>
+
+    <div class="skills-logos">
+      <h3>Mes technologies</h3>
+      <div class="logos-grid">
+        <div class="logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+          <span>JavaScript</span>
+        </div>
+        <div class="logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+          <span>React</span>
+        </div>
+        <div class="logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+          <span>PHP</span>
+        </div>
+        <div class="logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel">
+          <span>Laravel</span>
+        </div>
+        <div class="logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+          <span>MySQL</span>
+        </div>
+        <div class="logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+          <span>Node.js</span>
+        </div>
+        <div class="logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+          <span>TypeScript</span>
+        </div>
+        <div class="logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+          <span>Git</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projets">
+  <div class="section-header">
+    <h2>Mes Projets</h2>
+    <p>Quelques réalisations qui montrent mes compétences FullStack</p>
+  </div>
+
+  <div class="projects-grid">
+    <!-- Projet 1 - exemple -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="Sary/projet1.jpg" alt="Projet 1 - Application de gestion">
+      </div>
+      <div class="project-content">
+        <h3>Gestionnaire de Tâches Collaboratif</h3>
+        <p class="project-desc">
+          Application web permettant à plusieurs utilisateurs de gérer des tâches en temps réel avec authentification et notifications.
+        </p>
+        <div class="tech-tags">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>Express</span>
+          <span>MongoDB</span>
+          <span>Socket.io</span>
+        </div>
+        <div class="project-links">
+          <a href="https://demo-projet1.vicdev.mg" target="_blank" class="btn-demo">Voir le Démo</a>
+          <a href="https://github.com/tonusername/gestion-taches" target="_blank" class="btn-code">Voir le Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projet 2 - exemple (duplique et modifie) -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="Sary/projet2.jpg" alt="Projet 2 - Site E-commerce">
+      </div>
+      <div class="project-content">
+        <h3>Boutique en Ligne (Laravel)</h3>
+        <p class="project-desc">
+          Plateforme e-commerce complète avec panier, paiement intégré (Stripe), gestion admin et dashboard analytics.
+        </p>
+        <div class="tech-tags">
+          <span>Laravel</span>
+          <span>PHP</span>
+          <span>MySQL</span>
+          <span>Tailwind CSS</span>
+          <span>Livewire</span>
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank" class="btn-demo">Voir le Démo</a>
+          <a href="#" target="_blank" class="btn-code">Voir le Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ajoute 2-4 projets supplémentaires comme ça -->
+  </div>
+</section>
+
+<!-- SECTION CONTACT -->
+<section id="contact">
+  <div class="contact-container">
+    
+    <!-- Colonne gauche : infos -->
+    <div class="contact-info">
+      <h2>Discutons ensemble !</h2>
+      <p>Je suis disponible pour des projets, collaborations ou simplement un café virtuel ☕</p>
+      
+      <div class="contact-details">
+        <a href="mailto:herindrainyvictor@gmail.com" class="contact-link">
+          <i class="fas fa-envelope"></i>
+          herindrainyvictor@gmail.com
+        </a>
+        
+        <a href="tel:+261349432493" class="contact-link">
+          <i class="fas fa-phone"></i>
+          +261 34 94 324 93 / 33 34 485 79
+        </a>
+        
+        <div class="contact-link">
+          <i class="fas fa-map-marker-alt"></i>
+          Mahintsy, Tananarivo – Madagascar
+        </div>
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/herindrainy-victor-aa7907285/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://victor-dev.my.canva.site/" target="_blank" aria-label="Site personnel">
+          <i class="fas fa-globe"></i>
+        </a>
+        <a href="https://www.facebook.com/hery.watib" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <!-- Remplace les liens par tes vrais profils si différents -->
+      </div>
+
+      <!-- Bouton CV -->
+      <a href="Cv/CV_2026-02-26_Herindrainy_Victor.pdf" 
+         class="btn-cv" 
+         download>
+         <i class="fas fa-download"></i> Télécharger mon CV
+      </a>
+    </div>
+
+    <!-- Colonne droite : Formulaire -->
+    <form action="https://formsubmit.co/herindrainyvictor@gmail.com" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <input type="text" name="subject" placeholder="Sujet" required>
+      <textarea name="message" rows="6" placeholder="Votre message..." required></textarea>
+      
+      <!-- Anti-spam caché -->
+      <input type="hidden" name="_next" value="https://tonportfolio.com/merci.html">
+      <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio !">
+      
+      <button type="submit" class="btn-contact">Envoyer le message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+      Vic <span class="red">.</span><span class="highlight">Dev</span>
+    </div>
+    
+    <nav class="footer-nav">
+      <a href="#">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    
+    <div class="footer-copyright">
+      © 2026 Herindrainy Victor – Tous droits réservés<br>
+      Développé avec ❤️ à Madagascar
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
