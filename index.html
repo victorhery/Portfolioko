@@ -52,7 +52,7 @@
         Développeur Web, Cyber éthique.
       </p>
 
-      <button class="btn-contact">CONTACTEZ MOI</button>
+      <a href="#contact" class="btn-contact">CONTACTEZ MOI</a>
     </div>
 
     <div class="hero-image-container">
@@ -128,48 +128,60 @@
   <div class="projects-grid">
     <!-- Projet 1 - exemple -->
     <div class="project-card">
-      <div class="project-image">
-        <img src="Sary/projet1.jpg" alt="Projet 1 - Application de gestion">
+      <div class="project-image-container">
+        <video 
+          class="project-video" 
+          muted 
+          playsinline 
+          controls 
+          poster="Sary/projet1.PNG">
+          <source src="videos/demo-rh.mp4" type="video/mp4">
+          <img src="Sary/projet1.PNG" alt="Aperçu Gestion RH">
+        </video>
       </div>
+
       <div class="project-content">
-        <h3>Gestionnaire de Tâches Collaboratif</h3>
-        <p class="project-desc">
-          Application web permettant à plusieurs utilisateurs de gérer des tâches en temps réel avec authentification et notifications.
-        </p>
         <div class="tech-tags">
-          <span>React</span>
-          <span>Node.js</span>
-          <span>Express</span>
-          <span>MongoDB</span>
-          <span>Socket.io</span>
+          <span>Vue js + Vite</span>
+          <span>Laravel</span>
+          <span>MySQL</span>
         </div>
+        <h3>Gestionnaire Ressource Humaine</h3>
+        <p class="project-desc">
+          Système complet de pointage et gestion de congés avec interface Admin et Employé.
+        </p>
         <div class="project-links">
-          <a href="https://demo-projet1.vicdev.mg" target="_blank" class="btn-demo">Voir le Démo</a>
-          <a href="https://github.com/tonusername/gestion-taches" target="_blank" class="btn-code">Voir le Code</a>
+          <a href="https://github.com/victorhery/gestion_rh" target="_blank" class="btn-demo">Voir le Code</a>
         </div>
       </div>
     </div>
 
     <!-- Projet 2 - exemple (duplique et modifie) -->
     <div class="project-card">
-      <div class="project-image">
-        <img src="Sary/projet2.jpg" alt="Projet 2 - Site E-commerce">
+      <div class="project-image-container">
+        <video 
+          class="project-video" 
+          muted 
+          playsinline 
+          controls 
+          poster="Sary/projet2.PNG">
+          <source src="videos/projet2.mp4" type="video/mp4">
+          <img src="Sary/projet2.PNG" alt="Aperçu Gestion RH">
+        </video>
       </div>
+
       <div class="project-content">
-        <h3>Boutique en Ligne (Laravel)</h3>
-        <p class="project-desc">
-          Plateforme e-commerce complète avec panier, paiement intégré (Stripe), gestion admin et dashboard analytics.
-        </p>
         <div class="tech-tags">
+          <span>Vue js + Vite</span>
           <span>Laravel</span>
-          <span>PHP</span>
           <span>MySQL</span>
-          <span>Tailwind CSS</span>
-          <span>Livewire</span>
         </div>
+        <h3>Gestionnaire Agence Sécurité</h3>
+        <p class="project-desc">
+          Gérer l'Agence Sécurité avec interface Admin et CRUD des Utilisateurs.
+        </p>
         <div class="project-links">
-          <a href="#" target="_blank" class="btn-demo">Voir le Démo</a>
-          <a href="#" target="_blank" class="btn-code">Voir le Code</a>
+          <a href="https://github.com/victorhery/SafeNet" target="_blank" class="btn-demo">Voir le Code</a>
         </div>
       </div>
     </div>

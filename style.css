@@ -309,6 +309,7 @@ h1 {
   gap: 32px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px 0;
 }
 
 .project-card {
@@ -325,9 +326,22 @@ h1 {
   box-shadow: 0 20px 40px rgba(0,0,0,0.4);
   border-color: #58a6ff;
 }
-
+.project-image-container {
+  width: 100%;
+  /* HAUTEUR TRÈS RÉDUITE : On passe de ~220px à 120px */
+  height: 320px; 
+  background: #000; /* Fond noir pour les bandes si la vidéo est format portrait */
+  overflow: hidden;
+  border-bottom: 1px solid #21262d;
+}
+.project-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  display: block;
+}
 .project-image {
-  height: 220px;
+  height: 280px; /* Aligné sur la même hauteur que le container */
   overflow: hidden;
 }
 
@@ -343,27 +357,27 @@ h1 {
 }
 
 .project-content {
-  padding: 24px;
+  padding: 15px 25px 25px 25px;
 }
 
 .project-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 12px;
+  font-size: 1.4rem;
+  margin-bottom: 6px;
   color: #c9d1d9;
 }
 
 .project-desc {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: #8b949e;
-  margin-bottom: 20px;
-  line-height: 1.5;
+  margin-bottom: 15px; 
+  line-height: 1.4;
 }
 
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 24px;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .tech-tags span {
@@ -377,7 +391,7 @@ h1 {
 
 .project-links {
   display: flex;
-  gap: 16px;
+  gap: 15px;
 }
 
 .btn-demo, .btn-code {
